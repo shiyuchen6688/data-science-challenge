@@ -8,7 +8,7 @@ Question1:
     a. Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.
         
         Answer:
-        Base on the question, Average Order Value (AOV) = Total Revenue / Number of Order, and the data is taken from 100 sneaker shops over
+        Base on the question, Average Order Value (AOV) = Total Revenue / Number of Orders, and the data is taken from 100 sneaker shops over
         30 day window. AOV is basically the mean order value, but the mean can be misleading sometimes. Mean is very sensitive to outliers or skewness.
         As we can see, there are some orders with very large value in our dataset (for example order 17 have order_amount=704000), so our dataset 
         is skewed to the right, the outliers will pull our AOV to the right and result in an AOV that is actually much higher than the point 
@@ -20,7 +20,8 @@ Question1:
 
         Answer:
         I would report the median of order value over all orders from 100 sneaker shops over 30 day window, because our dataset contains many
-        significant outliers, the median is more robust to outliers and will give a better estimation of the center.
+        outliers that have values significantly higher than the rest of the data, the median is more robust to outliers and will give a better
+        estimate of the center.
 
 
 
