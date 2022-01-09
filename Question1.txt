@@ -1,0 +1,30 @@
+Question1:
+    On Shopify, we have exactly 100 sneaker shops, and each of these shops sells only one 
+    model of shoe. We want to do some analysis of the average order value (AOV). When
+    we look at orders data over a 30 day window, we naively calculate an AOV of $3145.13. 
+    Given that we know these shops are selling sneakers, a relatively affordable item, 
+    something seems wrong with our analysis.
+
+    a. Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.
+        
+        Answer:
+        Base on the question, Average Order Value (AOV) = Total Revenue / Number of Order, and the data is taken from 100 sneaker shops over
+        30 day window. AOV is basically the mean order value, but the mean can be misleading sometimes. Mean is very sensitive to outliers or skewness.
+        As we can see, there are some orders with very large value in our dataset (for example order 17 have order_amount=704000), so our dataset 
+        is skewed to the right, the outliers will pull our AOV to the right and result in an AOV that is actually much higher than the point 
+        where most data points cluster around.
+        
+
+
+    b. What metric would you report for this dataset?
+
+        Answer:
+        I would report the median of order value over all orders from 100 sneaker shops over 30 day window, because our dataset contains many
+        significant outliers, the median is more robust to outliers and will give a better estimation of the center.
+
+
+
+    c. What is its value?
+
+        Answer:
+        Median of order value = 256, calculated using excel formula "=MEDIAN(D2,D5001)".
